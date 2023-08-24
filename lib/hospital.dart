@@ -26,8 +26,10 @@ class StartState extends State<Hospital> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       GestureDetector(
-                        onTap: (){print("Teste botão!");},
-                        child: Image.asset('assets/images/ep_back.png')),
+                          onTap: () {
+                            print("Teste botão!");
+                          },
+                          child: Image.asset('assets/images/ep_back.png')),
                       Container(
                         width: 217,
                         height: 61,
@@ -57,7 +59,7 @@ class StartState extends State<Hospital> {
                   child: Image.asset('assets/images/fotohospital.png'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 26,left:16, bottom: 19),
+                  padding: const EdgeInsets.only(top: 26, left: 16, bottom: 19),
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: Text(
@@ -72,20 +74,22 @@ class StartState extends State<Hospital> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 16, bottom: 19, right: 32),
-                    child: Text(
-                      'Lorem algums infos tipo nome, data de criação, local, nome da equipe que recolhe doação, ações que vão usar o dinheiro para e propósitos, Lorem algums infos tipo nome, data de criação, local, nome da equipe que recolhe doação, ações que vão usar o dinheiro para e propósitos Lorem algums infos tipo nome, data de criação, local, nome da equipe que recolhe doação, ações que vão usar o dinheiro para e propósitos ',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontFamily: 'Raleway',
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        height: 1,
-                      ),
-                      textAlign: TextAlign.justify,
+                  padding:
+                      const EdgeInsets.only(left: 16, bottom: 19, right: 32),
+                  child: Text(
+                    'Lorem algums infos tipo nome, data de criação, local, nome da equipe que recolhe doação, ações que vão usar o dinheiro para e propósitos, Lorem algums infos tipo nome, data de criação, local, nome da equipe que recolhe doação, ações que vão usar o dinheiro para e propósitos Lorem algums infos tipo nome, data de criação, local, nome da equipe que recolhe doação, ações que vão usar o dinheiro para e propósitos ',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontFamily: 'Raleway',
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      height: 1,
                     ),
+                    textAlign: TextAlign.justify,
+                  ),
                 ),
-                SizedBox(height: 100), // Espaçamento entre o texto e o botão "Doar",
+                SizedBox(
+                    height: 100), // Espaçamento entre o texto e o botão "Doar",
               ],
             ),
           ),
@@ -95,7 +99,6 @@ class StartState extends State<Hospital> {
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: const Color(0xFF1C1C1C),
- 
               ),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(

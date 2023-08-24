@@ -1,4 +1,4 @@
-import 'package:fetin/hospital.dart';
+import 'package:fetin/pesquisa.dart';
 import 'package:flutter/material.dart';
 
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       initialRoute: '/',
-      routes: {'/' :(context) => Hospital()}
+      routes: {'/' :(context) => Pesquisa()}
     );
   }
 }
