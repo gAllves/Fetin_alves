@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print
 
 import 'package:fetin/botao.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +26,7 @@ class ConfigState extends State<Config> {
               width: double.infinity,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 0),
               child: GestureDetector(
                   onTap: () {print("Teste botão!");},
                   child: Image.asset('assets/images/setinha.png')),
