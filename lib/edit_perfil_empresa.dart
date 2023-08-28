@@ -107,8 +107,13 @@ class EditPerfilEmpresaState extends State<EditPerfilEmpresa> {
                                     Positioned(
                                         bottom: 0,
                                         right: 20,
-                                        child: Image.asset(
-                                            'assets/images/mais.png'))
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            print("Teste botão!");
+                                          },
+                                          child: Image.asset(
+                                              'assets/images/mais.png'),
+                                        ))
                                   ],
                                 ))),
                       ],
@@ -146,7 +151,7 @@ class EditPerfilEmpresaState extends State<EditPerfilEmpresa> {
                                     color: Colors.grey,
                                     fontFamily: 'Raleway',
                                     fontSize: 20,
-                                    fontWeight: FontWeight.w300,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ),
@@ -296,6 +301,51 @@ class EditPerfilEmpresaState extends State<EditPerfilEmpresa> {
                         onSaved: (value) => password = value,
                       ),
                       SizedBox(height: 10),
+
+                      //CONFIRMAR SENHA
+                      MyTextFormFieldSenha(
+                        controller: passwordconfirmationcontroler,
+                        obscureText: !_passwordVisible,
+                        hintText: 'Confirmar Senha',
+                        validator: (value) {
+                          if (value.isEmpty) {
+                            return 'Por favor, digite uma senha válida';
+                          }
+                          return null;
+                        },
+                        onSaved: (value) => password = value,
+                      ),
+                      SizedBox(height: 30),
+
+                      Container(
+                        padding: EdgeInsets.only(bottom: 30),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF1C1C1C),
+                        ),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: Size(354, 27),
+                            backgroundColor: const Color(0xFFF0EC57),
+                            elevation: 0,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20)),
+                            ),
+                          ),
+                          onPressed: () {
+                            print("Teste botão!");
+                          },
+                          child: Text(
+                            "Salvar Edição",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 0),
+                              fontFamily: 'Raleway',
+                              fontSize: 24,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -303,32 +353,6 @@ class EditPerfilEmpresaState extends State<EditPerfilEmpresa> {
             ),
 
             //Botão Salvar edição
-            Container(
-              padding: EdgeInsets.only(bottom: 30),
-              decoration: BoxDecoration(
-                color: const Color(0xFF1C1C1C),
-              ),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(354, 27),
-                  backgroundColor: const Color(0xFFF0EC57),
-                  elevation: 0,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                ),
-                onPressed: () {},
-                child: Text(
-                  "Salvar Edição",
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    fontFamily: 'Raleway',
-                    fontSize: 24,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       ),

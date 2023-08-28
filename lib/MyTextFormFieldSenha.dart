@@ -32,7 +32,12 @@ class _MyTextFormFieldSenhaState extends State<MyTextFormFieldSenha> {
           controller: widget.controller,
           validator: widget.validator,
           onSaved: widget.onSaved,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Raleway',
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+            ),
           decoration: InputDecoration(
             suffixIcon: IconButton(
               icon: Icon(
