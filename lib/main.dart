@@ -1,4 +1,4 @@
-import 'package:fetin/perfil.dart';
+import 'package:fetin/edit_perfil_user.dart';
 import 'package:flutter/material.dart';
 
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       initialRoute: '/',
-      routes: {'/' :(context) => Perfil()}
+      routes: {'/' :(context) => EditPerfilUser()}
     );
   }
 }
