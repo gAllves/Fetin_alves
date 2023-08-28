@@ -91,12 +91,17 @@ class EditPerfilUserState extends State<EditPerfilUser> {
                                     ]),
                                 child: Stack(
                                   children: [
-                                    Image.asset('assets/images/foto_perfil.png'),
+                                    Image.asset(
+                                        'assets/images/foto_perfil.png'),
                                     Positioned(
                                         bottom: 0,
                                         right: 20,
-                                        child:
-                                            Image.asset('assets/images/mais.png'))
+                                        child: GestureDetector(
+                                            onTap: () {
+                                              print("Teste botão!");
+                                            },
+                                            child: Image.asset(
+                                                'assets/images/mais.png')))
                                   ],
                                 ))),
                       ],
@@ -129,7 +134,7 @@ class EditPerfilUserState extends State<EditPerfilUser> {
                                 color: Colors.grey,
                                 fontFamily: 'Raleway',
                                 fontSize: 20,
-                                fontWeight: FontWeight.w300,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
@@ -177,6 +182,20 @@ class EditPerfilUserState extends State<EditPerfilUser> {
                     onSaved: (value) => password = value,
                   ),
                   SizedBox(height: 20),
+
+                  MyTextFormFieldSenha(
+                    controller: passwordconfirmationcontroler,
+                    obscureText: !_passwordVisible,
+                    hintText: 'Confirmar senha',
+                    validator: (value) {
+                      if (value.isEmpty) {
+                        return 'Por favor, digite uma senha válida';
+                      }
+                      return null;
+                    },
+                    onSaved: (value) => passwordconfirmation = value,
+                  ),
+                  SizedBox(height: 20),
                 ],
               ),
             ),
@@ -195,7 +214,9 @@ class EditPerfilUserState extends State<EditPerfilUser> {
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  print("Teste botão!");
+                },
                 child: Text(
                   "Salvar Edição",
                   style: TextStyle(
@@ -213,4 +234,3 @@ class EditPerfilUserState extends State<EditPerfilUser> {
     );
   }
 }
-

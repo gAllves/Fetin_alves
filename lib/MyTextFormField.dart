@@ -26,7 +26,12 @@ class MyTextFormField extends StatelessWidget {
           controller: controller,
           validator: validator,
           onSaved: onSaved,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Raleway',
+            fontSize: 20,
+            fontWeight: FontWeight.w600
+          ),
           decoration: InputDecoration(
             contentPadding: EdgeInsets.fromLTRB(3, 15, 0, 0),
             hintText: hintText,
