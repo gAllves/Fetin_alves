@@ -1,4 +1,4 @@
-import 'package:fetin/doar.dart';
+import 'package:fetin/perfil_empresa.dart';
 import 'package:flutter/material.dart';
 
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       initialRoute: '/',
-      routes: {'/' :(context) => Doar()}
+      routes: {'/' :(context) => PerfilEmpresa()}
     );
   }
 }
